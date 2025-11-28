@@ -19,7 +19,7 @@ public class LeftLowerTriangle {
 
             for (int j = 1; j <= i; j++) { // control columns
 
-                System.out.print("* "); // print
+                System.out.print("*\s"); // print (use \s : for space or \t : for tab)
             }
             System.out.println(); // end line or change line
         }
