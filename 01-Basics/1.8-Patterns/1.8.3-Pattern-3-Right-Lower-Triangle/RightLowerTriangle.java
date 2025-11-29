@@ -38,3 +38,19 @@ public class RightLowerTriangle {
         }
     }
 }
+
+/**
+ * my solution:
+ * for (int i = 1; i <= n; i++) { // control rows
+ * 
+ * for (int j = 1; j <= n; j++) { // control columns
+ * 
+ * if (i + j <= n) {
+ * System.out.print("\s\s"); // print (use \s : for space or \t : for tab)
+ * } else {
+ * System.out.print("*\s"); // print (use \s : for space or \t : for tab)
+ * }
+ * }
+ * System.out.println(); // end line or change line
+ * }
+ */
