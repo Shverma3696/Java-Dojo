@@ -25,7 +25,6 @@ public class Diamond {
 
         int sp = n / 2; // number of spaces
         int st = 1; // number of stars
-        int mid = n / 2 + 1;
 
         for (int i = 1; i <= n; i++) { // control rows
 
@@ -38,7 +37,11 @@ public class Diamond {
                 System.out.print("*\s"); // print (use \s : for space or \t : for tab)
             }
 
-            if (i < mid) {
+            // since, main items of line 1 is already printed
+            // below is the prep for next line
+            // controlling the values of stars and spaces for next line to be printed
+
+            if (i <= n / 2) {
                 sp--; // spaces keeps decreasing by 1 as we move to next row, till mid row
                 st += 2; // stars keeps increasing by 2 as we move to next row, till mid row
             } else {
