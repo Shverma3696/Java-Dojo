@@ -1,5 +1,5 @@
 /**
- * 1. given a number 'n'.
+ * 1. given an odd number 'n'.
  * 
  * Print pattern (E.g., n = 5):
  * [----*]
