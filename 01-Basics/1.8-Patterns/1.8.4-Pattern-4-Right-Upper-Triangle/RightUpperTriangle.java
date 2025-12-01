@@ -29,8 +29,8 @@ public class RightUpperTriangle {
                 System.out.print("*\s"); // print (use \s : for space or \t : for tab)
             }
 
-            sp++; // spaces keeps decreasing by 1 as we move to next row
-            st--; // stars keeps increasing by 1 as we move to next row
+            sp++; // spaces keeps increasing by 1 as we move to next row
+            st--; // stars keeps decreasing by 1 as we move to next row
 
             System.out.println(); // end line or change line
         }
