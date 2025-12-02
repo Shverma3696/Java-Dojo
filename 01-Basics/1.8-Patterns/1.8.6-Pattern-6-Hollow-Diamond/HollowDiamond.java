@@ -18,7 +18,7 @@
  * [---*---]
  */
 
-public class Diamond {
+public class HollowDiamond {
     public static void main(String[] args) {
 
         int n = 7;
