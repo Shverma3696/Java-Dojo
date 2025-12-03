@@ -18,6 +18,8 @@ public class Diagonal1 {
         int st = 1; // number of stars is always 1
         int sp = 0; // number of spaces
 
+        // approach 1
+
         for (int i = 1; i <= n; i++) { // control rows
 
             for (int j = 1; j <= sp; j++) { // control columns for SPACES to be printed first
@@ -35,5 +37,21 @@ public class Diagonal1 {
             sp++;
             System.out.println(); // end line or change line
         }
+
     }
 }
+
+/**
+ * // approach 2
+ * for (int i = 1; i <= n; i++) {
+ * for (int j = 1; j <= i; j++) {
+ * if (i == j) {
+ * System.out.print("*\s"); // print (use \s : for space or \t : for tab)
+ * } else {
+ * System.out.print("\s\s");
+ * }
+ * }
+ * sp++;
+ * System.out.println(); // end line
+ * }
+ */
