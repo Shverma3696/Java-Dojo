@@ -10,7 +10,7 @@
  * 
  */
 
-public class HollowDiamond {
+public class Diagonal1 {
     public static void main(String[] args) {
 
         int n = 5;
