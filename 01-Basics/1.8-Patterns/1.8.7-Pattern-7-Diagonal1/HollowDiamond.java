@@ -31,15 +31,6 @@ public class HollowDiamond {
 
             // since, main items of line 1 is already printed
             // below is the prep for next line
-            // controlling the values of stars and spaces for next line to be printed
-
-            // if (i <= n / 2) {
-            // st--; // stars keeps decreasing by 1 as we move to next row, till mid row
-            // sp += 2; // spaces keeps increasing by 2 as we move to next row, till mid row
-            // } else {
-            // st++; // stars keeps increasing by 1 as we move past mid row
-            // sp -= 2; // spaces keeps decreasing by 2 as we move past mid row
-            // }
 
             sp++;
             System.out.println(); // end line or change line
