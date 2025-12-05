@@ -1,3 +1,14 @@
+/**
+ * 1. given a number 'n'.
+ * 
+ * Print pattern (E.g., n = 5):
+ * [*---*]
+ * [-*-*-]
+ * [--*--]
+ * [-*-*-]
+ * [*---*]
+ * 
+ */
 
 public class BothDiagonals {
     public static void main(String[] args) {
@@ -18,8 +29,3 @@ public class BothDiagonals {
 
     }
 }
-
-/**
- * 
- * 
- */
