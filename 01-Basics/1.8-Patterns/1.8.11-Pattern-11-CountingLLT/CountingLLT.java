@@ -15,13 +15,16 @@ public class CountingLLT {
 
         int n = 5;
 
-        for (int i = 1; i <= n; i++) {
+        // approach 1
 
+        int count = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(count + "\t");
+                count++;
+            }
+            System.out.println();
         }
 
     }
 }
-
-/**
- * // approach 1
- */
