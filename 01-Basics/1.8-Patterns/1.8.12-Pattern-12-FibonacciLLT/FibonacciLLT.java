@@ -16,13 +16,13 @@ public class FibonacciLLT {
 
         // approach 1
 
-        int a = 0;
-        int b = 1;
+        int a = 0; // first number
+        int b = 1; // second number
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(a + "\t");
-                int c = a + b;
+                int c = a + b; // calculated third number
                 a = b;
                 b = c;
             }
