@@ -54,4 +54,4 @@ public class NumberDiaomond {
     }
 }
 
-// try
+// try again for better understanding
