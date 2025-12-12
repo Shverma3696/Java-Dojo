@@ -55,3 +55,5 @@ public class NumberDiaomond {
 }
 
 // try again for better understanding
+// try again for better understanding
+// try again for better understanding
