@@ -1,0 +1,9 @@
+----------- back dating a commit ---------------------------
+
+//  step - 1
+git add . // to add all files ready to commit
+
+// step - 2
+git commit --date='2025-12-12' -m 'added comments for 12-12-2025'
+
+---------------------------------------------------------------------
