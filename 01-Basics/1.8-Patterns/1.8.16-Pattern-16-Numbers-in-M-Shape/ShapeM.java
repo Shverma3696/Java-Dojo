@@ -20,31 +20,36 @@ public class ShapeM {
         int st = 1;
         int sp = (2 * n) - 3;
 
-        int val = 1; // to be printed
-
         for (int i = 1; i <= n; i++) {
-
-            if (i == n) {
-                for (int j = 1; j <= col; j++) {
-                    System.out.print(val + "\t");
-                }
-                break;
-            }
+            int val = 1; // to be printed
 
             for (int j = 1; j <= st; j++) {
                 System.out.print(val + "\t");
+                val++;
             }
 
             for (int j = 1; j <= sp; j++) {
                 System.out.print("\t");
             }
 
+            if (i == n) {
+                st--;
+                val--;
+                // my approach below
+                // for (int j = 1; j <= col; j++) {
+                // System.out.print(val + "\t");
+                // }
+                // break;
+            }
+
             for (int j = 1; j <= st; j++) {
+                val--;
                 System.out.print(val + "\t");
             }
 
             st++;
             sp -= 2;
+
             System.out.println();
         }
 
