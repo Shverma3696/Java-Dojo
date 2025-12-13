@@ -15,7 +15,7 @@ public class ShapeM {
         int n = 4;
 
         // approach 1
-        int col = (2 * n) - 1;
+        // int col = (2 * n) - 1;
 
         int st = 1;
         int sp = (2 * n) - 3;
