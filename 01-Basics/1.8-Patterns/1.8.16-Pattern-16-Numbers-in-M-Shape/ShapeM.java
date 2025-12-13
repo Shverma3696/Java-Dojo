@@ -20,17 +20,19 @@ public class ShapeM {
         int st = 1;
         int sp = (2 * n) - 3;
 
+        int val = 1; // to be printed
+
         for (int i = 1; i <= n; i++) {
 
             if (i == n) {
                 for (int j = 1; j <= col; j++) {
-                    System.out.print("*\t");
+                    System.out.print(val + "\t");
                 }
                 break;
             }
 
             for (int j = 1; j <= st; j++) {
-                System.out.print("*\t");
+                System.out.print(val + "\t");
             }
 
             for (int j = 1; j <= sp; j++) {
@@ -38,7 +40,7 @@ public class ShapeM {
             }
 
             for (int j = 1; j <= st; j++) {
-                System.out.print("*\t");
+                System.out.print(val + "\t");
             }
 
             st++;
