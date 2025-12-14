@@ -16,6 +16,29 @@ public class ArrowShape {
         int n = 5;
 
         // approach 1
+        int sp = n / 2;
+        int st = 1;
+        int mid = n / 2 + 1;
+
+        for (int i = 1; i <= n; i++) {
+
+            // spaces before mid
+            for (int j = 1; j <= sp; j++) {
+                System.out.print("\t");
+            }
+
+            // stars
+            for (int j = 1; j <= st; j++) {
+                System.out.print("*\t");
+            }
+
+            // spaces after mid
+            for (int j = 1; j <= sp; j++) {
+                System.out.print("\t");
+            }
+
+            System.out.println();
+        }
 
     }
 }
