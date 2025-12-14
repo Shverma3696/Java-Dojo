@@ -22,9 +22,13 @@ public class ArrowShape {
 
         for (int i = 1; i <= n; i++) {
 
-            // spaces before mid
+            // spaces
             for (int j = 1; j <= sp; j++) {
-                System.out.print("\t");
+                if (i == mid) {
+                    System.out.print("*\t");
+                } else {
+                    System.out.print("\t");
+                }
             }
 
             // stars
@@ -32,9 +36,10 @@ public class ArrowShape {
                 System.out.print("*\t");
             }
 
-            // spaces after mid
-            for (int j = 1; j <= sp; j++) {
-                System.out.print("\t");
+            if (i <= n / 2) {
+                st++;
+            } else {
+                st--;
             }
 
             System.out.println();
