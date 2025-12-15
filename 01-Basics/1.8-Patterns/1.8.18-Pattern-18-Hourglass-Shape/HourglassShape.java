@@ -23,14 +23,19 @@ public class HourglassShape {
 
         for (int i = 1; i <= n; i++) {
 
-            // spaces
+            // spaces before
             for (int j = 1; j <= sp; j++) {
                 System.out.print("\t");
             }
 
             // stars
             for (int j = 1; j <= st; j++) {
-                System.out.print("*\t");
+
+                if (i > 1 && i <= n / 2 && j > 1 && j < st) {
+                    System.out.print("\t");
+                } else {
+                    System.out.print("*\t");
+                }
             }
 
             if (i <= n / 2) {
