@@ -13,7 +13,8 @@
 public class SwastikaShape {
     public static void main(String[] args) {
 
-        int n = 5;
+        // int n = 5;
+        int n = 7;
 
         // approach 1
         int mid = n / 2 + 1;
@@ -67,3 +68,10 @@ public class SwastikaShape {
 
     }
 }
+
+// alternative approach is using if-elseif-else
+// if (i == 1)
+// else if(i <= n/2)
+// else if(i == mid)
+// else if(i < n)
+// else
