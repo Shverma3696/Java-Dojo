@@ -40,3 +40,6 @@ public class WShape {
 
     }
 }
+
+// to practice : try M shape as well
+// hint : upper hald diagonals
