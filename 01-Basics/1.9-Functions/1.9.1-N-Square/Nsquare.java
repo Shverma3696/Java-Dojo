@@ -1,6 +1,7 @@
 /**
  * 1. Compute square of a number using function
  * 2. given integer 'n'.
+ * 
  */
 
 public class Nsquare {
@@ -17,8 +18,11 @@ public class Nsquare {
         // int nSquare = n * n;
 
         // using funtion
-        int nSquare = nSquare(n);
+        // int nSquare = nSquare(n);
+        // System.out.println("N square = " + nSquare);
 
-        System.out.println("N square = " + nSquare);
+        // or use directly in print statement
+        System.out.println("N square = " + nSquare(n));
+
     }
 }
