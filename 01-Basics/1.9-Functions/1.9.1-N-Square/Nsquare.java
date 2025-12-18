@@ -4,12 +4,20 @@
  */
 
 public class Nsquare {
+
+    public static int nSquare(int x) {
+        return x * x;
+    }
+
     public static void main(String[] args) {
 
-        int n = 101;
+        int n = 11;
 
         // normal way without function
-        int nSquare = n * n;
+        // int nSquare = n * n;
+
+        // using funtion
+        int nSquare = nSquare(n);
 
         System.out.println("N square = " + nSquare);
     }
