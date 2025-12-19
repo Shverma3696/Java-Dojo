@@ -8,15 +8,15 @@
 public class DigitFrequency {
 
     // approach using function
-    public static int computeDigitFrequency(int x, int y) {
+    public static int computeDigitFrequency(int n, int d) {
         int frequency = 0;
 
-        while (x != 0) {
-            int rem = x % 10;
-            if (rem == y) {
+        while (n != 0) {
+            int rem = n % 10;
+            if (rem == d) {
                 frequency++;
             }
-            x = x / 10;
+            n = n / 10;
         }
         return frequency;
     }
