@@ -8,6 +8,22 @@
 public class DigitFrequency {
     public static void main(String[] args) {
 
+        // given
+        int n = 994543234, d = 4;
+
+        // approach
+        int frequency = 0;
+
+        while (n != 0) {
+            int rem = n % 10;
+            if (rem == d) {
+                frequency++;
+            }
+            n = n / 10;
+        }
+
+        System.out.println(frequency);
+
     }
 
 }
