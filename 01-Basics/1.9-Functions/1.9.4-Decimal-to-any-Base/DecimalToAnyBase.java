@@ -1,6 +1,6 @@
 /**
  * 1. You are given a decimal number 'n'.
- * 2. You are given a base 'b'.
+ * 2. You are given a base 'b'. (0 > b < 10)
  * 3. You are required to convert the number 'n' into its corresponding value in
  * base 'b'.
  * 
