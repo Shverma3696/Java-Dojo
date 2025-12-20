@@ -8,20 +8,20 @@
 
 public class DecimalToAnyBase {
 
+    // Sumeet Sir's approach
     public static int decimalToAnyBase(int n, int b) {
 
-        int cnum = 0; // converted number
-        int count = 0;
-        while (n != 0) {
-            int rem = n % b;
-            int mult = (int) Math.pow(10, count);
-            cnum = cnum + rem * mult;
-
+        int rv = 0; // return value
+        int pow = 1; // multiplication power of 10
+        while (n > 0) {
+            int dig = n % b;
             n = n / b;
-            count++;
+
+            rv += dig * pow;
+            pow *= 10;
         }
 
-        return cnum;
+        return rv;
     }
 
     public static void main(String[] args) {
@@ -34,3 +34,22 @@ public class DecimalToAnyBase {
     }
 
 }
+
+/**
+ * // my approach
+ * public static int decimalToAnyBase(int n, int b) {
+ * 
+ * int cnum = 0; // converted number
+ * int count = 0;
+ * while (n != 0) {
+ * int rem = n % b;
+ * int mult = (int) Math.pow(10, count);
+ * cnum = cnum + rem * mult;
+ * 
+ * n = n / b;
+ * count++;
+ * }
+ * 
+ * return cnum;
+ * }
+ */
