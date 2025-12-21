@@ -11,7 +11,7 @@ public class AnyBaseToDecimal {
     // my approach
     public static int anyBaseToDecimal(int n, int b) {
         int rv = 0; // return value
-        int pow = 1; // multiplication power of 8
+        int pow = 1; // multiplication power of 8 to the power 0
         while (n > 0) {
             int dig = n % 10;
             n = n / 10;
