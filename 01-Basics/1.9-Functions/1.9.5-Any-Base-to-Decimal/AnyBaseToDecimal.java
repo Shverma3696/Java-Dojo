@@ -17,7 +17,7 @@ public class AnyBaseToDecimal {
             n = n / 10;
 
             rv += dig * pow;
-            pow *= 8;
+            pow *= b;
         }
 
         return rv;
