@@ -1,6 +1,6 @@
 /**
  * 1. You are grven a number 'n'.
- * 2. You are given a base 'b' (2 > b < 10). 'n' is a number on base 'b'.
+ * 2. You are given a base 'b' (2 >= b <= 10). 'n' is a number on base 'b'.
  * 3. You are required to convert the number 'n' into its corresponding value in
  * decimal system.
  * 
