@@ -1,7 +1,7 @@
 /**
  * 1. You are given a number 'n'.
- * 2. You are given a base 'b1'. 'n' is a on base 'b1'.
- * 3. You are given another base 'b2'.
+ * 2. You are given a base 'b1' (2 >= b1 <= 10). 'n' is a on base 'b1'.
+ * 3. You are given another base 'b2' (2 >= b2 <= 10).
  * 4. You are required to convert the number 'n' of base 'b1' to a number in
  * base b2.
  * 
@@ -27,7 +27,7 @@ public class AnyBaseToAnyBase {
     public static void main(String[] args) {
 
         // given
-        int n = 1172, b = 8;
+        int n = 1172, b1 = 8, b2 = 10;
 
         System.out.println(anyBaseToAnyBase(n, b));
 
