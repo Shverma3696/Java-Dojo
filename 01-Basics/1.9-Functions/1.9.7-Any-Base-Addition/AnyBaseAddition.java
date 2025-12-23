@@ -16,9 +16,31 @@ public class AnyBaseAddition {
 
     }
 
-    // my approach
+    // approach
     public static int getSum(int n1, int n2, int b) {
         int rv = 0; // return value
+
+        int pow = 1; // zeroth power of 10;
+        int carry = 0; // initial value of carry is always 0
+        while (n1 > 0 || n2 > 0 || carry > 0) {
+
+            // step 1: take out the units digits from both numbers
+            int d1 = n1 % 10;
+            int d2 = n2 % 10;
+
+            // step 2: reduce both numbers for next iterations
+            n1 = n1 / 10;
+            n2 = n2 / 10;
+
+            // step3: add both the units digits d1 and d2
+            int ansDigit = d1 + d2 + carry;
+            carry = ansDigit / b;
+            ansDigit = ansDigit % b;
+
+            // step 4: now, create the final answer sum
+            rv += ansDigit * pow;
+            pow *= 10;
+        }
 
         return rv;
     }
