@@ -16,7 +16,7 @@ public class AnyBaseSubtraction {
     public static void main(String[] args) {
 
         // given
-        int n1 = 236, n2 = 754, b = 8;
+        int n1 = 236, n2 = 1212, b = 8;
 
         System.out.println(getDifference(n1, n2, b));
 
