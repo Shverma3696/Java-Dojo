@@ -15,15 +15,15 @@ public class AnyBaseMultiplication {
     public static void main(String[] args) {
 
         // given
-        int n1 = 236, n2 = 1212, b = 8;
+        int n1 = 2156, n2 = 74, b = 8;
         // expected output = 754
 
-        System.out.println(getDifference(n1, n2, b));
+        System.out.println(getProduct(n1, n2, b));
 
     }
 
     // approach
-    public static int getDifference(int n1, int n2, int b) {
+    public static int getProduct(int n1, int n2, int b) {
         int rv = 0; // return value
 
         int pow = 1; // zeroth power of 10;
@@ -57,4 +57,5 @@ public class AnyBaseMultiplication {
 
         return rv;
     }
+
 }
