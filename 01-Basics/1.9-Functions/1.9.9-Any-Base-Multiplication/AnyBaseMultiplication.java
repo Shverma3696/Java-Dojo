@@ -15,8 +15,8 @@ public class AnyBaseMultiplication {
     public static void main(String[] args) {
 
         // given
-        int n1 = 2156, n2 = 74, b = 8;
-        // expected output = 754
+        int n1 = 234, n2 = 76, b = 8;
+        // expected output = 22710
 
         System.out.println(getProduct(n1, n2, b));
 
@@ -27,32 +27,20 @@ public class AnyBaseMultiplication {
         int rv = 0; // return value
 
         int pow = 1; // zeroth power of 10;
-        int carry = 0; // initial value of carry is always 0
         while (n2 > 0) {
 
-            // step 1: take out the units digits from both numbers
-            int d1 = n1 % 10;
+            // step 1: take out units/single digit from N2
             int d2 = n2 % 10;
 
-            // step 2: reduce both numbers for next iterations
-            n1 = n1 / 10;
+            // step 2: reduce N2 for next iteration
             n2 = n2 / 10;
 
-            // step3: manage borrow /carry smartly and subtract both d1 from d2
-            int ansDigit = 0;
-            d2 = d2 + carry;
+            // step 3: product with single digit of N2
+            int singleDigitProduct = getProductWithSingleDigit(n1, d2, b);
 
-            if (d2 >= d1) {
-                carry = 0;
-                ansDigit = d2 - d1;
-            } else {
-                carry = -1;
-                ansDigit = d2 + b - d1;
-            }
-
-            // step 4: now, create the final answer difference
-            rv += ansDigit * pow;
-            pow *= 10;
+            // step 4: now, create the final answer product
+            rv = getSum(rv, singleDigitProduct * pow, b);
+            pow = pow * 10;
         }
 
         return rv;
