@@ -22,6 +22,15 @@ public class ArrayBasics {
         arr[4] = 65;
 
         // get array of length using arr.length
-        System.out.println(arr.length);
+        // System.out.println(arr.length);
+
+        // printing array
+        // wrong approach
+        // System.out.println(arr);
+
+        // correct approach
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
     }
 }
