@@ -25,24 +25,42 @@ public class SpanOfArray {
     }
 
     public static int findMin(int[] arr) {
-        int rv = Integer.MAX_VALUE;
+        // approach 1
+        // int rv = Integer.MAX_VALUE;
+        // for (int i = 0; i < arr.length; i++) {
+        // if (arr[i] < rv) {
+        // rv = arr[i];
+        // }
+        // }
+        // return rv;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < rv) {
-                rv = arr[i];
+        // approach 2
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
             }
         }
-        return rv;
+        return min;
     }
 
     public static int findMax(int[] arr) {
-        int rv = Integer.MIN_VALUE;
+        // approach 1
+        // int rv = Integer.MIN_VALUE;
+        // for (int i = 0; i < arr.length; i++) {
+        // if (arr[i] > rv) {
+        // rv = arr[i];
+        // }
+        // }
+        // return rv;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > rv) {
-                rv = arr[i];
+        // approach 2
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
             }
         }
-        return rv;
+        return max;
     }
 }
