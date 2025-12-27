@@ -29,8 +29,22 @@ public class ArrayBasics {
         // System.out.println(arr);
 
         // correct approach
+        // for (int i = 0; i < arr.length; i++) {
+        // System.out.println(arr[i]);
+        // }
+
+        // what happens when copying arrays or its values
+        int[] arr2 = arr;
+
+        arr2[3] = 1000;
+
+        // check and print arr 1 first then arr2
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
         }
     }
 }
