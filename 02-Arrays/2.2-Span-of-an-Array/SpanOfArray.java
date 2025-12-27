@@ -64,3 +64,25 @@ public class SpanOfArray {
         return max;
     }
 }
+
+/**
+ * other approach to find min max in ONE go:
+ * 
+ * Directly use in main method
+ * int min = arr[0];
+ * int max = arr[0];
+ * 
+ * for (int i = 1; i < arr.length; i++) {
+ * 
+ * // to find min
+ * if (arr[i] < min) {
+ * min = arr[i];
+ * }
+ * 
+ * // to find max
+ * if (arr[i] > max) {
+ * max = arr[i];
+ * }
+ * }
+ *
+ */
