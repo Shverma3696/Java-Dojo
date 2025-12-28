@@ -5,6 +5,8 @@
  * 4. You are required to check if 'd' exists in the array 'a' and at what index
  * (0 based). If found print the index; otherwise print -1.
  * 
+ * Please Note:- If there are 2 same data/d elements present in the array, print
+ * the index of first element.
  */
 
 public class FindElementInAnArray {
