@@ -9,7 +9,17 @@
 
 public class FindElementInAnArray {
     public static void main(String[] args) {
+
         // given
-        int[] arr = { 15, 30, 40, 4, 11, 9 };
+        int[] a = { 15, 30, 40, 4, 11, 9 };
+        int d = 40; // element to find
+
+        System.out.println(d + "Element is at the following index = " + findIndexOfElementInAnArray(a, d));
+    }
+
+    public static int findIndexOfElementInAnArray(int[] arr, int d) {
+        int rv = -1;
+
+        return rv;
     }
 }
