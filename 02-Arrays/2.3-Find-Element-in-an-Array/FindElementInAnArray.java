@@ -14,12 +14,17 @@ public class FindElementInAnArray {
         int[] a = { 15, 30, 40, 4, 11, 9 };
         int d = 40; // element to find
 
-        System.out.println(d + "Element is at the following index = " + findIndexOfElementInAnArray(a, d));
+        System.out.println(d + " Element is at the following index => " + findIndexOfElementInAnArray(a, d));
     }
 
     public static int findIndexOfElementInAnArray(int[] arr, int d) {
         int rv = -1;
-
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == d) {
+                rv = i;
+                break;
+            }
+        }
         return rv;
     }
 }
