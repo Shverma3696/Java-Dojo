@@ -14,8 +14,28 @@ public class BarChart {
         // given
         int[] a = { 3, 1, 0, 7, 5 };
 
+        int maxElement = findMaxElement(a);
+
+        for (int i = 0; i < maxElement; i++) {
+            for (int j = 0; j < a.length; j++) {
+
+            }
+        }
+
         // System.out.println(d + " Element is at the following index => " +
         // findIndexOfElementInAnArray(a, d));
+    }
+
+    public static int findMaxElement(int[] a) {
+        int max = a[0];
+
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+
+        return max;
     }
 
 }
