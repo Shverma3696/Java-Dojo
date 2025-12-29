@@ -15,15 +15,19 @@ public class BarChart {
         int[] a = { 3, 1, 0, 7, 5 };
 
         int maxElement = findMaxElement(a);
+        int height = maxElement;
 
         for (int i = 0; i < maxElement; i++) {
             for (int j = 0; j < a.length; j++) {
-
+                if (a[j] == height) {
+                    System.out.print("*\t");
+                } else {
+                    System.out.print("\t");
+                }
             }
+            height--;
+            System.out.println();
         }
-
-        // System.out.println(d + " Element is at the following index => " +
-        // findIndexOfElementInAnArray(a, d));
     }
 
     public static int findMaxElement(int[] a) {
