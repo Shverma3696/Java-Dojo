@@ -12,8 +12,7 @@ public class BarChart {
     public static void main(String[] args) {
 
         // given
-        int[] a = { 15, 30, 40, 4, 11, 9 };
-        int d = 40; // element to find
+        int[] a = { 3, 1, 0, 7, 5 };
 
         // System.out.println(d + " Element is at the following index => " +
         // findIndexOfElementInAnArray(a, d));
