@@ -14,18 +14,16 @@ public class BarChart {
         // given
         int[] a = { 3, 1, 0, 7, 5 };
 
-        int maxElement = findMaxElement(a);
-        int height = maxElement;
+        int maxHeight = findMaxElement(a);
 
-        for (int i = 0; i < maxElement; i++) {
+        for (int floor = maxHeight; floor >= 1; floor--) {
             for (int j = 0; j < a.length; j++) {
-                if (a[j] == height) {
+                if (a[j] >= floor) {
                     System.out.print("*\t");
                 } else {
                     System.out.print("\t");
                 }
             }
-            height--;
             System.out.println();
         }
     }
