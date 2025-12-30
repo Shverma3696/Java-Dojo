@@ -25,7 +25,7 @@ public class SumOfTwoarrays {
 
         // sum
         int carry = 0;
-        while (k > 0) {
+        while (k >= 0) {
             int ansDigit = carry;
 
             if (i >= 0) {
