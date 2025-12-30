@@ -18,4 +18,10 @@ public class SumOfTwoarrays {
 
     }
 
+    public static int Sum(int[] a1, int[] a2) {
+        int rv = 0;
+
+        return rv;
+    }
+
 }
