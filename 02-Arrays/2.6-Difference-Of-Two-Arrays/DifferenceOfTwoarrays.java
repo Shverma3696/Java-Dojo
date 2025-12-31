@@ -4,8 +4,10 @@
  * 3. You are given a number n2, representing the size of array a2.
  * 4. You are given n2 numbers, representing elements of array a2.
  * 5. The two arrays represent digits of two numbers.
- * 6. You are required to add the numbers represented by two arrays and print
- * the arrays
+ * 6. You are required to find the difference of two numbers represented by two
+ * arrays and print the array; a2-a1
+ * 
+ * Note:- Assume a2 is greater than a1
  * 
  */
 
