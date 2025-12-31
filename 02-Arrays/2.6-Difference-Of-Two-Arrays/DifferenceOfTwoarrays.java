@@ -18,43 +18,35 @@ public class DifferenceOfTwoarrays {
         int[] a1 = { 3, 1, 0, 7, 5 };
         int[] a2 = { 1, 1, 1, 1, 1, 1 };
 
-        int[] sum = new int[a1.length > a2.length ? a1.length : a2.length];
+        int[] difference = new int[a2.length];
 
         // pointers
         int i = a1.length - 1;
         int j = a2.length - 1;
-        int k = sum.length - 1;
+        int k = difference.length - 1;
 
-        // sum
-        int carry = 0;
+        // subtraction
+        int carry = 0; // or borrow
         while (k >= 0) {
-            int ansDigit = carry;
+            int ansDigit = 0;
+            int a1val = i >= 0 ? a1[i] : 0; // managing leading zeros if a1 is a very small number or has less digits
+                                            // than a2
 
-            if (i >= 0) {
-                ansDigit += a1[i];
+            if (a2[j] + carry >= a1val) {
+                ansDigit = a2[j] + carry - a1val;
+                carry = 0;
+            } else {
+                ansDigit = a2[j] + carry + 10 - a1val; // +10 borrowed
+                carry = -1; // carry becomes -1 for next iteration
             }
 
-            if (j >= 0) {
-                ansDigit += a2[j];
-            }
-
-            carry = ansDigit / 10;
-            ansDigit = ansDigit % 10;
-
-            sum[k] = ansDigit;
+            difference[k] = ansDigit;
 
             i--;
             j--;
             k--;
         }
 
-        if (carry != 0) {
-            System.out.print(carry);
-        }
-
-        for (int val : sum) {
-            System.out.print(val);
-        }
     }
 
     // public static int sumOfTwoArrays(int[] a1, int[] a2) {
