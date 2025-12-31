@@ -47,6 +47,22 @@ public class DifferenceOfTwoarrays {
             k--;
         }
 
+        // to print the number and also handle the leading zeros because we do not want
+        // to print leading zeros
+        int index = 0;
+        while (index < difference.length) {
+            if (difference[index] == 0) {
+                index++;
+            } else {
+                break;
+            }
+        }
+
+        while (index < difference.length) {
+            System.out.print(difference[index]);
+            index++;
+        }
+
     }
 
     // public static int sumOfTwoArrays(int[] a1, int[] a2) {
