@@ -9,10 +9,16 @@ public class ReverseAnArray {
     public static void main(String[] args) {
 
         // given
-        int[] a = { 3, 1, 0, 7, 5 };
+        int[] a = { 10, 20, 30, 40, 0, 50 };
 
         // funtions
-        reverse(a);
+        // reverse(a);
         display(a);
+    }
+
+    public static void display(int[] a) {
+        for (int val : a) {
+            System.out.print(val + " ");
+        }
     }
 }
