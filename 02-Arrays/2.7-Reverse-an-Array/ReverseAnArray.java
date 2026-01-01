@@ -9,7 +9,7 @@ public class ReverseAnArray {
     public static void main(String[] args) {
 
         // given
-        int[] a = { 10, 20, 30, 40, 0, 50 };
+        int[] a = { 10, 20, 30, 40, 50 };
 
         // funtions
         reverse(a);
@@ -21,7 +21,7 @@ public class ReverseAnArray {
         int i = 0;
         int j = a.length - 1;
 
-        while (i <= j) {
+        while (i < j) {
             int temp = a[i];
             a[i] = a[j];
             a[j] = temp;
