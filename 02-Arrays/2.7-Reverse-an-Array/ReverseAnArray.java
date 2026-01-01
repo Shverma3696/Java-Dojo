@@ -12,8 +12,28 @@ public class ReverseAnArray {
         int[] a = { 10, 20, 30, 40, 0, 50 };
 
         // funtions
-        // reverse(a);
+        reverse(a);
         display(a);
+    }
+
+    public static void reverse(int[] a) {
+        // pointers
+        int i = 0;
+        int j = a.length - 1;
+
+        while (i <= j) {
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+            i++;
+            j--;
+        }
+    }
+
+    public static void swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
     }
 
     public static void display(int[] a) {
