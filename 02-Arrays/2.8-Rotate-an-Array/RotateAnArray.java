@@ -1,7 +1,7 @@
 /**
  * 1. You are given a number 'n', representing the size of array 'a'.
  * 2. You are given 'n' numbers, representing elements of array 'a'.
- * 3. You are g•ven a number 'k'.
+ * 3. You are given a number 'k'.
  * 4. Rotate the array 'a', 'k' times to the right (for positive values of k),
  * and to the left for negative values of 'k'.
  * 
@@ -18,24 +18,8 @@ public class RotateAnArray {
         display(a);
     }
 
-    public static void reverse(int[] a) {
-        // pointers
-        int i = 0;
-        int j = a.length - 1;
+    public static void rotate(int[] a) {
 
-        while (i < j) {
-            int temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-            i++;
-            j--;
-        }
-    }
-
-    public static void swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
     }
 
     public static void display(int[] a) {
