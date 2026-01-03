@@ -11,14 +11,20 @@ public class InverseOfAnArray {
 
         // given
         int[] a = { 4, 3, 0, 2, 1 };
+        // {2, 4, 3, 1, 0 }
 
         // funtions
         int[] ia = inverse(a); // inversed array
-        display(a);
+        display(ia);
     }
 
     public static int[] inverse(int[] a) {
         int[] rv = new int[a.length];
+
+        for (int i = 0; i < a.length; i++) {
+            int val = a[i];
+            rv[val] = i;
+        }
 
         return rv;
     }
