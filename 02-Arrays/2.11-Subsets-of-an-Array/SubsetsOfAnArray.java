@@ -39,9 +39,9 @@ public class SubsetsOfAnArray {
 
                 // catching the element if bit = 1 & forming subset
                 if (rem == 0) {
-                    subset = "-\s" + subset;
+                    subset = "-\t" + subset;
                 } else {
-                    subset = a[j] + "\s" + subset;
+                    subset = a[j] + "\t" + subset;
                 }
             }
 
