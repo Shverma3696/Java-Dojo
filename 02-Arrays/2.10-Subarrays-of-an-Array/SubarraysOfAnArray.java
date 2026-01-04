@@ -12,11 +12,18 @@ public class SubarraysOfAnArray {
         // given
         int[] a = { 10, 20, 30 };
 
+        printAllSubarrays(a);
     }
 
-    // public static void display(int[] a) {
-    // for (int val : a) {
-    // System.out.print(val + " ");
-    // }
-    // }
+    public static void printAllSubarrays(int[] a) {
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i; j < a.length; j++) {
+                for (int k = i; k <= j; k++) {
+                    System.out.print(a[k] + "\s");
+                }
+                System.out.println();
+            }
+        }
+    }
 }
