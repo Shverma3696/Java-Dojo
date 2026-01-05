@@ -18,6 +18,27 @@ public class BinarySearchAlgorithm {
 
         // given
         int[] a = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-    }
 
+        // to find
+        int data = 70;
+
+        // Binary Search Algorithm
+        int low = 0;
+        int high = a.length - 1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            if (data > a[mid]) {
+                low = mid + 1;
+            } else if (data < a[mid]) {
+                high = mid - 1;
+            } else {
+                System.out.println("The data or element " + data + " is present at the following index -> " + mid);
+                return;
+            }
+
+        }
+
+    }
 }
