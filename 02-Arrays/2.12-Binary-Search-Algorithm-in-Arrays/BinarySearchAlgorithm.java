@@ -34,11 +34,10 @@ public class BinarySearchAlgorithm {
             } else if (data < a[mid]) {
                 high = mid - 1;
             } else {
-                System.out.println("The data or element " + data + " is present at the following index -> " + mid);
+                System.out.println("The data is present at the following index -> " + mid);
                 return;
             }
-
         }
-
+        System.out.println("Data not found.");
     }
 }
