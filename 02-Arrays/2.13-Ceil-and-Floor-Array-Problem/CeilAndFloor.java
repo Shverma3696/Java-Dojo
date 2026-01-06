@@ -27,18 +27,28 @@ public class CeilAndFloor {
         int low = 0; // this will become ceil when the loop ends
         int high = a.length - 1; // this will become floor when the loop ends
 
+        // Part of second approach
+        // declar ceil and floor and set them in the loop
+        int ceil = 0;
+        int floor = 0;
+
         while (low <= high) {
             int mid = (low + high) / 2;
 
             if (data > a[mid]) {
                 low = mid + 1;
+                floor = a[mid]; // 2nd approach
             } else if (data < a[mid]) {
                 high = mid - 1;
+                ceil = a[mid];
             } else {
-                System.out.println("The data is present at the following index -> " + mid);
+                floor = a[mid];
+                ceil = a[mid];
                 break;
             }
         }
-        System.out.println(a[low] + " " + a[high]);
+        // System.out.println("Ceil = " + a[low] + ", " + "Floor = " + a[high]);
+        System.out.println("Ceil = " + ceil + ", " + "Floor = " + floor);
+
     }
 }
