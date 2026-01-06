@@ -40,10 +40,10 @@ public class CeilAndFloor {
                 floor = a[mid]; // 2nd approach
             } else if (data < a[mid]) {
                 high = mid - 1;
-                ceil = a[mid];
+                ceil = a[mid]; // 2nd approach
             } else {
-                floor = a[mid];
-                ceil = a[mid];
+                floor = a[mid]; // 2nd approach
+                ceil = a[mid]; // 2nd approach
                 break;
             }
         }
