@@ -21,9 +21,9 @@ public class CeilAndFloor {
         int[] a = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
 
         // to find
-        int data = 70;
+        int data = 52;
 
-        // Binary Search Algorithm
+        // Using Binary Search Algorithm
         int low = 0;
         int high = a.length - 1;
 
@@ -39,6 +39,8 @@ public class CeilAndFloor {
                 return;
             }
         }
+
+        System.out.println(low + " " + high);
         System.out.println("Data not found.");
     }
 }
