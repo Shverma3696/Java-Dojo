@@ -1,16 +1,15 @@
 /**
  * 1. You are given a number 'n', representing the size of array 'a'.
  * 2. You are given 'n' numbers, representing elements of array 'a'.
- * 3. You are given another number 'd'.
- * 4. You are required to find the ceil and floor of 'd' in the array 'a'.
- * 5. Asssumption - Array is sorted
+ * 3. You are given another number 'd'/data/element.
+ * 4. You are required to find the first and last index of 'd' in the array 'a'.
+ * 5. Asssumption - Array is sorted, and may contain duplicaies
  * 
  * Exp:
- * ->> Ceil is defined as value in array which is just greater than 'd'. If an
- * element equal to 'd' exists, then that will be considered as ceil.
+ * >> a = {10, 20, 20, 20, 40, 50}
+ * >> data = 20
  * 
- * ->> Floor is defined as value in array which is just lesser than d. If an
- * element equal to 'd' extsts, then that will be considered as floor.
+ * expected output: First index = 1, Last index = 3
  * 
  */
 
