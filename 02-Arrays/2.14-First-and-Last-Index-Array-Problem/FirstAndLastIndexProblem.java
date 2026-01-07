@@ -16,38 +16,54 @@
 public class FirstAndLastIndexProblem {
     public static void main(String[] args) {
 
-        // given
-        int[] a = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        // // given
+        // int[] a = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
 
-        // to find
-        int data = 72;
+        // // to find
+        // int data = 72;
+
+        // testing
+        int[] a = { 10, 20, 20, 20, 40, 50 };
+        int data = 20;
 
         // Using Binary Search Algorithm
         int low = 0; // this will become ceil when the loop ends
         int high = a.length - 1; // this will become floor when the loop ends
 
-        // Part of second approach
-        // declar ceil and floor and set them in the loop
-        int ceil = 0;
-        int floor = 0;
+        // declare first index; set it in the loop
+        int firstIndex = -1;
 
+        // first index first
         while (low <= high) {
             int mid = (low + high) / 2;
-
             if (data > a[mid]) {
                 low = mid + 1;
-                floor = a[mid]; // 2nd approach
             } else if (data < a[mid]) {
                 high = mid - 1;
-                ceil = a[mid]; // 2nd approach
             } else {
-                floor = a[mid]; // 2nd approach
-                ceil = a[mid]; // 2nd approach
-                break;
+                firstIndex = mid;
+                high = mid - 1;
             }
         }
-        // System.out.println("Ceil = " + a[low] + ", " + "Floor = " + a[high]);
-        System.out.println("Ceil = " + ceil + ", " + "Floor = " + floor);
+        System.out.print("First Index = " + firstIndex + ", ");
 
+        // declare last index; set it in the loop
+        int lastIndex = -1;
+
+        // first index first
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (data > a[mid]) {
+                low = mid + 1;
+            } else if (data < a[mid]) {
+                high = mid - 1;
+            } else {
+                lastIndex = mid;
+                low = mid + 1;
+            }
+        }
+        System.out.print("Last Index = " + lastIndex + ", ");
+
+        // System.out.println("Ceil = " + ceil + ", " + "Floor = " + floor);
     }
 }
