@@ -43,12 +43,23 @@ public class ArrayListBasics {
         list.remove(1);
         System.out.println(list + " -> " + list.size()); // output : [10, 20, 30] -> 3
 
-        // Similarly we can create ALs of different types like String, Long, Double, etc
+        // 7. Similarly we can create ALs of different types like String, Long, Double,
+        // etc
         ArrayList<String> list2 = new ArrayList<>();
         list2.add("Hello");
         list2.add("Tello");
         list2.add("Cello");
         System.out.println(list2 + " -> " + list2.size()); // output : [Hello, Tello, Cello] -> 3
+
+        // 8. Looping through elements of AL
+        // 8.1. Standard way
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        // 8.2. Better way
+        for (int data : list) {
+            System.out.println(data);
+        }
 
     }
 }
