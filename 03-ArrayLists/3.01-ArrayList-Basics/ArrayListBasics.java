@@ -33,7 +33,15 @@ public class ArrayListBasics {
 
         // 4. Extract / Get element from ArrayList
         int val = list.get(1);
-        System.out.println(val);
+        System.out.println(val); // output : 1000
+
+        // 5. Set / change element at some index
+        list.set(1, 2000);
+        System.out.println(list + " -> " + list.size()); // output : [10, 2000, 20, 30] -> 4
+
+        // 6. Removing an element from ArrayList
+        list.remove(1);
+        System.out.println(list + " -> " + list.size()); // output : [10, 20, 30] -> 3
 
     }
 }
