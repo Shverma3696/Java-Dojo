@@ -31,5 +31,9 @@ public class ArrayListBasics {
         list.add(1, 1000); // or
         System.out.println(list + " -> " + list.size()); // output : [10, 1000, 20, 30] -> 4
 
+        // 4. Extract / Get element from ArrayList
+        int val = list.get(1);
+        System.out.println(val);
+
     }
 }
