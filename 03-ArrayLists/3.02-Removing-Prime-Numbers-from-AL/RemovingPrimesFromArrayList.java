@@ -12,8 +12,9 @@ import java.util.ArrayList;
 public class RemovingPrimesFromArrayList {
     public static void main(String[] args) {
 
+        // given
         // new way of Declaring and Initialising an ArrayList
-        ArrayList<Integer> list = new ArrayList<>() {
+        ArrayList<Integer> al = new ArrayList<>() {
             {
                 add(1);
                 add(2);
@@ -27,6 +28,15 @@ public class RemovingPrimesFromArrayList {
                 add(10);
             }
         };
+
+        // method to remove prime number elements
+        removePrimes(al);
+
+        // print updated arraylist as output
+        System.out.println(al);
+    }
+
+    public static void removePrimes(ArrayList<Integer> al) {
 
     }
 }
