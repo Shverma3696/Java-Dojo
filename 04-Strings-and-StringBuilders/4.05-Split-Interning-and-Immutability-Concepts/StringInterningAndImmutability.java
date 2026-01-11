@@ -9,6 +9,9 @@
  * both the first the address, if same return true, else checks the string char
  * by char and only then return true or false
  * 
+ * Immutatbility : reference can change but instance is immmutable
+ * performance : due to immutability strings are slow
+ * 
  */
 
 public class StringInterningAndImmutability {
