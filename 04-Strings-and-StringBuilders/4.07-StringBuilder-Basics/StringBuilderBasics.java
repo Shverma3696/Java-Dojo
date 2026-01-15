@@ -7,6 +7,7 @@
  * - charAt()
  * - setCharAt()
  * - insert()
+ * - append()
  * - substring
  * 
  * Importnant Note:-
@@ -53,7 +54,11 @@ public class StringBuilderBasics {
         sb.delete(5, 12);
         System.out.println("4. Modified String (delete-substring-startIdx-endIdx) = " + sb);
 
-        // 8. Substring in stringbuilder
+        // 8. append method
+        sb.append('?');
+        System.out.println("char appended = " + sb);
+
+        // 9. Substring in stringbuilder
         String ss = sb.substring(3, 5);
         System.out.println("substring = " + ss);
 
