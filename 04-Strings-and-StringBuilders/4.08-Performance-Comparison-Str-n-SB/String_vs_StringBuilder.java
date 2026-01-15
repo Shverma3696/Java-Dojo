@@ -18,7 +18,13 @@ public class String_vs_StringBuilder {
     public static void main(String[] args) {
 
         // given a large integer
-        int n = 100000; // result = approx 3500ms (string) vs less than 50ms (StringBuilder)
+
+        // int n = 1000000;
+        // result = no answer (taking too much time) (string) vs less than 57ms
+        // (StringBuilder)
+
+        int n = 100000;
+        // result = approx 3500ms (string) vs less than 50ms (StringBuilder)
 
         // 1. String
         String str = "";
