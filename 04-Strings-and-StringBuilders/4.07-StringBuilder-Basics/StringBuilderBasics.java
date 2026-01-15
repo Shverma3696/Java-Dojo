@@ -5,9 +5,12 @@
  * - taking input from console
  * - length()
  * - charAt()
+ * - setCharAt()
  * - substring
  * 
  * Importnant Note:-
+ * StringBuilder class is mutable and provide built-in methods like insert() and
+ * setCharAt()
  * 
  */
 
@@ -27,5 +30,10 @@ public class StringBuilderBasics {
         // 4. charAt() method
         char ch = sb.charAt(0);
         System.out.println("Char at given index = " + ch);
+
+        // 5. setCharAt() method : changes the instance/character at given index
+        sb.setCharAt(0, 'C');
+        System.out.println("Modified String = " + sb);
+
     }
 }
