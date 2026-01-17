@@ -27,6 +27,7 @@ public class String_vs_StringBuilder {
         // result = approx 3500ms (string) vs less than 50ms (StringBuilder)
 
         // 1. String
+        @SuppressWarnings("unused")
         String str = "";
         long startTime1 = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
