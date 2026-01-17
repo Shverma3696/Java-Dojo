@@ -12,11 +12,50 @@
 public class StringCompression {
     public static void main(String[] args) {
 
-        String s = "aaabbcccddaeef";
+        String str = "aaabbcccddaeef";
 
         compression1(str);
         compression2(str);
 
+    }
+
+    public static void compression1(String s) {
+        String newStr = "" + s.charAt(0);
+        for (int i = 1; i < s.length(); i++) {
+            char currChar = s.charAt(i);
+            char prevChar = s.charAt(i - 1);
+
+            if (currChar != prevChar) {
+                newStr += currChar;
+            }
+        }
+
+        System.out.println(newStr);
+    }
+
+    public static void compression2(String s) {
+        String newStr = "" + s.charAt(0);
+        int count = 1;
+        for (int i = 1; i < s.length(); i++) {
+            char currChar = s.charAt(i);
+            char prevChar = s.charAt(i - 1);
+
+            if (currChar == prevChar) {
+                count++;
+            } else {
+                if (count > 1) {
+                    newStr += count;
+                    count = 1;
+                }
+                newStr += currChar;
+            }
+        }
+
+        if (count > 1) {
+            newStr += count;
+        }
+
+        System.out.println(newStr);
     }
 
 }
