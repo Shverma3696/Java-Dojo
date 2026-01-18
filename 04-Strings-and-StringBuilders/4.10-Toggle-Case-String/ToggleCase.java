@@ -10,7 +10,10 @@ public class ToggleCase {
     public static void main(String[] args) {
 
         String str = "ABcdEFgh";
-
+        System.out.println(toggleCase(str));
     }
 
+    public static String toggleCase(String str) {
+
+    }
 }
