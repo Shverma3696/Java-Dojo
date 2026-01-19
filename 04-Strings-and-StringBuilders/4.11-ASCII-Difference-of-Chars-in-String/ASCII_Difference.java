@@ -20,8 +20,16 @@ public class ASCII_Difference {
     }
 
     private static String asciiDifferenceString(String str) {
-        StringBuilder sb = new StringBuilder(str);
+        StringBuilder sb = new StringBuilder();
 
+        char firstChar = str.charAt(0);
+        sb.append(firstChar);
+
+        for (int i = 1; i < str.length(); i++) {
+            int asciiDifference = str.charAt(i) - str.charAt(i - 1);
+            sb.append(asciiDifference);
+            sb.append(str.charAt(i));
+        }
         return sb.toString();
     }
 
