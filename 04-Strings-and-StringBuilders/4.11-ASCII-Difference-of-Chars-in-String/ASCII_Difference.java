@@ -19,4 +19,10 @@ public class ASCII_Difference {
         System.out.println(asciiDifferenceString(str));
     }
 
+    private static String asciiDifferenceString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+
+        return sb.toString();
+    }
+
 }
