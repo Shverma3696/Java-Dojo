@@ -22,8 +22,10 @@ public class ASCII_Difference {
     private static String asciiDifferenceString(String str) {
         StringBuilder sb = new StringBuilder();
 
-        char firstChar = str.charAt(0);
-        sb.append(firstChar);
+        // char firstChar = str.charAt(0);
+        // sb.append(firstChar);
+
+        sb.append(str.charAt(0)); // append first character of string
 
         for (int i = 1; i < str.length(); i++) {
             int asciiDifference = str.charAt(i) - str.charAt(i - 1);
