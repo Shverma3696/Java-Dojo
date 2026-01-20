@@ -38,3 +38,4 @@ public class ASCII_Difference {
 }
 
 // comment 1
+// comment 2
