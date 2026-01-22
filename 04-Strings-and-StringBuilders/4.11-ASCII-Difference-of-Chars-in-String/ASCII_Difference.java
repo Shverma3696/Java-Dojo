@@ -38,3 +38,5 @@ public class ASCII_Difference {
 }
 
 // comment 123
+// comment 123
+// comment 123
