@@ -1,5 +1,6 @@
 /**
  * 1. Given a string
+ * 2. You have to print all permutationsof the given string iteratively
  * 
  */
 
