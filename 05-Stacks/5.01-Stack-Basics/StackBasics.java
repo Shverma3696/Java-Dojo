@@ -25,6 +25,11 @@ public class StackBasics {
         // 2.1. push() method
         stk.push(10);
         stk.push(20);
+        stk.push(30);
+        stk.push(40);
         System.out.println(stk);
+
+        // 2.2. peek() and size()
+        System.out.println("Top element => " + stk.peek() + " ; Size of Stack => " + stk.size());
     }
 }
