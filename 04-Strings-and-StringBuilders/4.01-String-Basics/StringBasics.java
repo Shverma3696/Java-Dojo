@@ -26,7 +26,7 @@ public class StringBasics {
         // String s2 = scanner.nextLine(); // nextLine() reads entire line
         // System.out.println(s2);
 
-        // 3. Length90 function - gets the size of string
+        // 3. Length() function - gets the size of string
         String s = "abcdef";
         System.out.println("String size = " + s.length());
 
