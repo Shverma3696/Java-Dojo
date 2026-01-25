@@ -16,8 +16,8 @@ import java.util.Stack;
 public class DuplicateBrackets {
     public static void main(String[] args) {
 
-        String str = "((a + b) + (c + d))"; // false
-        // String str = "(a + b) + ((c + d))"; // true
+        // String str = "((a + b) + (c + d))"; // false
+        String str = "(a + b) + ((c + d))"; // true
 
         Stack<Character> stk = new Stack<>();
 
