@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 /**
  * Stack Basics
@@ -13,7 +12,9 @@ import java.util.Stack;
  * remove -> pop() ; lets the user remove the top / latest element
  * size()
  * 
- */
+*/
+
+import java.util.Stack;
 
 public class StackBasics {
     public static void main(String[] args) {
