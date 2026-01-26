@@ -1,6 +1,6 @@
 
 /**
- * 1. You are given a string representing an expressaon.
+ * 1. You are given a string representing an expression.
  * 2. Assume that the expression balanced i.e., the opening and closing brackets match with each other.
  * 3. But, some of the pair of brackets maybe extra or needless.
  * 4. You are required to print "true" if you detect extra brackets or "false" otherwise.
