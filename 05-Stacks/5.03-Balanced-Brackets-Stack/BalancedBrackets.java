@@ -16,12 +16,12 @@ import java.util.Stack;
 public class BalancedBrackets {
     public static void main(String[] args) {
 
-        String str = "[(a + b) + {(c + d) * (e/f)}]"; // true
+        // String str = "[(a + b) + {(c + d) * (e/f)}]"; // true
         // String str = "[(a + b) + {(c + d) * (e/f)]}"; // false
         // String str = "[(a + b) + {(c + d) * (e/f)}"; // false
         // String str = "([(a + b) + {(c + d) * (e/f)}]"; // true
         // String str = "[{[(a + b) * (e/f)}]"; //false
-        // String str = "[(a + b))}]"; //false
+        String str = "[(a + b))}]"; // false
 
         Stack<Character> stk = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
@@ -49,6 +49,12 @@ public class BalancedBrackets {
                 }
             }
             // else do nothing
+        }
+
+        if (stk.size() == 0) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
         }
 
     }
