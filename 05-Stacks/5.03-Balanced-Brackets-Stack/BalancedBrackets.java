@@ -28,16 +28,39 @@ public class BalancedBrackets {
             char ch = str.charAt(i);
 
             if (ch == '(' || ch == '{' || ch == '[') {
-
+                stk.push(ch);
             } else if (ch == ')') {
-
+                boolean val = handleClosingBracket(stk, '(');
+                if (val == false) {
+                    System.out.println(val);
+                    return;
+                }
             } else if (ch == '}') {
-
+                boolean val = handleClosingBracket(stk, '{');
+                if (val == false) {
+                    System.out.println(val);
+                    return;
+                }
             } else if (ch == ']') {
-
+                boolean val = handleClosingBracket(stk, '[');
+                if (val == false) {
+                    System.out.println(val);
+                    return;
+                }
             }
             // else do nothing
         }
 
+    }
+
+    public static boolean handleClosingBracket(Stack<Character> st, char corresOpenBracket) {
+        if (st.size() == 0) {
+            return false;
+        } else if (st.peek() != corresOpenBracket) {
+            return false;
+        } else {
+            st.pop();
+            return true;
+        }
     }
 }
