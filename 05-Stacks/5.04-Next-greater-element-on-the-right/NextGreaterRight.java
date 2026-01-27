@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * 1. You are given a number 'n'. representing the Size of array 'a'.
  * 2. You are given 'n' numbers. representing elements of array 'a'.
@@ -34,8 +36,35 @@ public class NextGreaterRight {
     }
 
     public static int[] nextGreaterElement(int[] a) {
-        int[] nge = new int[a.length];
+        int[] nge = new int[a.length]; // next greater element array
 
+        // create a new stack
+        Stack<Integer> st = new Stack<>();
+
+        // 1. push the last element in the stack
+        st.push(a[a.length - 1]);
+
+        // set the last element in the nge array to handle the last element
+        nge[a.length - 1] = -1;
+
+        // 2. reverse for loop from 2nd last digit
+        for (int i = a.length - 2; i >= 0; i--) {
+            // rule : pop - answer - push
+
+            // 2.1. pop
+            while (st.size() > 0 && a[i] >= st.peek()) {
+                st.pop();
+            }
+
+            // 2.2. answer
+            if (st.size() == 0) {
+                nge[i] = -1;
+            } else {
+                nge[i] = st.peek();
+            }
+
+            st.push(a[i]);
+        }
         return nge;
     }
 
