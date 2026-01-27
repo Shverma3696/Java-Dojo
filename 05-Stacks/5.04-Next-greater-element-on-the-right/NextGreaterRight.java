@@ -28,6 +28,15 @@
 public class NextGreaterRight {
     public static void main(String[] args) {
         int[] a = { 2, 5, 9, 3, 1, 12, 6, 8, 7 };
+
+        int[] nge = nextGreaterElement(a);
+        display(nge);
+    }
+
+    public static int[] nextGreaterElement(int[] a) {
+        int[] nge = new int[a.length];
+
+        return nge;
     }
 
     public static void display(int[] a) {
