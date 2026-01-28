@@ -46,6 +46,20 @@ public class NextGreaterRight_Sol_2 {
         // 1. push the position of the first element in the stack
         st.push(0);
 
+        // normal for loop
+        for (int i = 0; i < a.length; i++) {
+            while (st.size() > 0 && a[i] > a[st.peek()]) {
+                int pos = st.peek();
+                nge[pos] = a[i];
+                st.pop();
+            }
+            st.push(i);
+        }
+
+        while (st.size() > 0) {
+            int pos = st.peek();
+            a[pos] = -1;
+        }
         return nge;
     }
 
