@@ -25,9 +25,11 @@ import java.util.Stack;
  * >> Next greater for 8 ts -1
  * >> Next greater for 7 is -1
  * 
+ * Solution :- iteration left to right
+ * 
  */
 
-public class NextGreaterRight {
+public class NextGreaterRight_Sol_2 {
     public static void main(String[] args) {
         int[] a = { 2, 5, 9, 3, 1, 12, 6, 8, 7 };
 
@@ -41,30 +43,9 @@ public class NextGreaterRight {
         // create a new stack
         Stack<Integer> st = new Stack<>();
 
-        // 1. push the last element in the stack
-        st.push(a[a.length - 1]);
+        // 1. push the position of the first element in the stack
+        st.push(0);
 
-        // set the last element in the nge array to handle the last element
-        nge[a.length - 1] = -1;
-
-        // 2. reverse for loop from 2nd last digit
-        for (int i = a.length - 2; i >= 0; i--) {
-            // rule : pop - answer - push
-
-            // 2.1. pop
-            while (st.size() > 0 && a[i] >= st.peek()) {
-                st.pop();
-            }
-
-            // 2.2. answer
-            if (st.size() == 0) {
-                nge[i] = -1;
-            } else {
-                nge[i] = st.peek();
-            }
-
-            st.push(a[i]);
-        }
         return nge;
     }
 
