@@ -74,3 +74,8 @@ public class NextGreaterRight_Sol_2 {
         System.out.println(sb);
     }
 }
+
+/**
+ * to do and practice : 5.05, 5.06, 5.07
+ * as home work practice
+ */
