@@ -39,7 +39,7 @@ public class StockSpanStack {
         st.push(0);
         span[0] = 1;
 
-        for (int i = 2; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             while (st.size() > 0 && arr[i] > arr[st.peek()])
                 ;
             st.pop();
@@ -49,6 +49,8 @@ public class StockSpanStack {
             } else {
                 span[i] = i - st.peek();
             }
+
+            st.push(i);
 
         }
         return span;
