@@ -23,6 +23,14 @@
 
 public class StockSpanStack {
     public static void main(String[] args) {
+        int[] arr = { 2, 5, 9, 3, 1, 12, 6, 8, 7 };
+
+        int[] spanArr = solution(arr); // span array or the result array
+        dsplay(spanArr);
+
+    }
+
+    public static int[] solution(int[] arr) {
 
     }
 
