@@ -25,4 +25,13 @@ public class StockSpanStack {
     public static void main(String[] args) {
 
     }
+
+    public static void dsplay(int[] a) {
+        StringBuilder sb = new StringBuilder();
+
+        for (int val : a) {
+            sb.append(val + "\n");
+        }
+        System.out.println();
+    }
 }
