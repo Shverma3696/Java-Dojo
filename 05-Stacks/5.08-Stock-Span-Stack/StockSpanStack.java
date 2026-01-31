@@ -1,3 +1,4 @@
+import java.util.Stack;
 
 /**
  * 1. You are given a number 'n', representing the size of array 'a'.
@@ -17,6 +18,7 @@
  * span for 8 is 2
  * span for 7 is 1
  * 
+ * Hint: pop, find, and push,
  */
 
 // import java.util.Stack;
@@ -31,7 +33,25 @@ public class StockSpanStack {
     }
 
     public static int[] solution(int[] arr) {
+        int[] span = new int[arr.length];
 
+        Stack<Integer> st = new Stack<>();
+        st.push(0);
+        span[0] = 1;
+
+        for (int i = 2; i < arr.length; i++) {
+            while (st.size() > 0 && arr[i] > arr[st.peek()])
+                ;
+            st.pop();
+
+            if (st.size() == 0) {
+                span[i] = i + 1;
+            } else {
+                span[i] = i - st.peek();
+            }
+
+        }
+        return span;
     }
 
     public static void dsplay(int[] a) {
