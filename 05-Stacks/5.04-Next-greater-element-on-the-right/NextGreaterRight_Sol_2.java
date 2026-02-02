@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 /**
  * 1. You are given a number 'n'. representing the Size of array 'a'.
@@ -27,7 +26,9 @@ import java.util.Stack;
  * 
  * Solution :- iteration left to right
  * 
- */
+*/
+
+import java.util.Stack;
 
 public class NextGreaterRight_Sol_2 {
     public static void main(String[] args) {

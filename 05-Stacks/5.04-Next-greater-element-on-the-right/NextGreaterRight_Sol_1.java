@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 /**
  * 1. You are given a number 'n'. representing the Size of array 'a'.
@@ -26,7 +25,9 @@ import java.util.Stack;
  * >> Next greater for 7 is -1
  * 
  * Solution :- iteration right to left (reverse)
- */
+*/
+
+import java.util.Stack;
 
 public class NextGreaterRight_Sol_1 {
     public static void main(String[] args) {
@@ -45,7 +46,7 @@ public class NextGreaterRight_Sol_1 {
         // 1. push the last element in the stack
         st.push(a[a.length - 1]);
 
-        // set the last element in the nge array to handle the last element
+        // set the last element in the nge array to -1 to handle the last element
         nge[a.length - 1] = -1;
 
         // 2. reverse for loop from 2nd last digit
