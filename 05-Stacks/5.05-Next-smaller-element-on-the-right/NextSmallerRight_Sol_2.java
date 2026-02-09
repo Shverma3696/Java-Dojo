@@ -76,6 +76,8 @@ public class NextSmallerRight_Sol_2 {
     }
 }
 
+// re - dry run the above code for better understanding
+
 /**
  * to do and practice : 5.05, 5.06, 5.07
  * as home work practice
