@@ -34,12 +34,12 @@ public class NextSmallerRight_Sol_2 {
     public static void main(String[] args) {
         int[] a = { 2, 5, 9, 3, 1, 12, 6, 8, 7 };
 
-        int[] nge = nextsmallerElement(a);
-        display(nge);
+        int[] nse = nextsmallerElement(a);
+        display(nse);
     }
 
     public static int[] nextsmallerElement(int[] a) {
-        int[] nge = new int[a.length]; // next smaller element array
+        int[] nse = new int[a.length]; // next smaller element array
 
         // create a new stack
         Stack<Integer> st = new Stack<>();
@@ -51,7 +51,7 @@ public class NextSmallerRight_Sol_2 {
         for (int i = 0; i < a.length; i++) {
             while (st.size() > 0 && a[i] > a[st.peek()]) {
                 int pos = st.peek();
-                nge[pos] = a[i];
+                nse[pos] = a[i];
                 st.pop();
             }
             st.push(i);
@@ -59,10 +59,10 @@ public class NextSmallerRight_Sol_2 {
 
         while (st.size() > 0) {
             int pos = st.peek();
-            nge[pos] = -1;
+            nse[pos] = -1;
             st.pop();
         }
-        return nge;
+        return nse;
     }
 
     public static void display(int[] a) {
