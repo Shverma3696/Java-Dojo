@@ -50,7 +50,7 @@ public class SlidingWindowMaximum {
             while (nge[j] < i + k) {
                 j = nge[j];
             }
-            System.out.println(arr[j]);
+            System.out.print(arr[j] + " ");
         }
     }
 
