@@ -23,5 +23,32 @@ import java.util.Stack;
 
 public class InfixEvaluation {
     public static void main(String[] args) {
+        String expression = "2+6*4/8-3";
+
+        // code
+    }
+
+    public static int precedence(char operator) {
+        if (operator == '+') {
+            return 1;
+        } else if (operator == '-') {
+            return 1;
+        } else if (operator == '*') {
+            return 2;
+        } else {
+            return 2;
+        }
+    }
+
+    public static int operation(int v1, int v2, char operator) {
+        if (operator == '+') {
+            return v1 + v2;
+        } else if (operator == '-') {
+            return v1 - v2;
+        } else if (operator == '*') {
+            return v1 * v2;
+        } else {
+            return v1 / v2;
+        }
     }
 }
