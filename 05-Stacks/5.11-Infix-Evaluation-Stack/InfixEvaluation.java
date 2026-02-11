@@ -7,6 +7,16 @@
  * expression = 2 + 6 * 4 / 8 - 3
  * >> answer = 2
  * 
+ * Constraints:
+ * > expression is always balanaced
+ * > the only operators used are: +, -, *, /
+ * > opening and closing brackets "( )" are can also be used to impact precedence of operation
+ * > (1) '+' and '-' ahve equal precedence
+ * > (2) '*' and '/' ahve equal precedence
+ * > (2) > (1); 2 has higher precedence than 1
+ * > in two operators of equal precendence; give preference to the one on the left
+ * > all operands are / must be single digit numbers
+ * 
 */
 
 import java.util.Stack;
