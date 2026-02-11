@@ -26,6 +26,55 @@ public class InfixEvaluation {
         String expression = "2+6*4/8-3";
 
         // code
+        Stack<Integer> operands = new Stack<>();
+        Stack<Character> operators = new Stack<>();
+
+        for (int i = 0; i < expression.length(); i++) {
+            char ch = expression.charAt(i);
+
+            if (ch == '(') {
+                operators.push(ch);
+            } else if (Character.isDigit(ch)) {
+                operands.push(ch - '0'); // convert char to number
+            } else if (ch == ')') {
+                while (operators.peek() != '(') {
+                    char operator = operators.pop();
+                    int v2 = operands.pop();
+                    int v1 = operands.pop();
+
+                    int opVal = operation(v1, v2, operator); // operation value
+                    operands.push(opVal);
+                }
+                operators.pop();
+
+            } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+
+                // ch is wanting higher priority operators to solve first
+                while (operators.size() >= 0 && operators.peek() != '('
+                        && precedence(ch) <= precedence(operators.peek())) {
+                    char operator = operators.pop();
+                    int v2 = operands.pop();
+                    int v1 = operands.pop();
+
+                    int opVal = operation(v1, v2, operator); // operation value
+                    operands.push(opVal);
+                }
+                // ch is pushing itself now
+                operators.push(ch);
+            }
+        }
+
+        while (operators.size() != 0) {
+            char operator = operators.pop();
+            int v2 = operands.pop();
+            int v1 = operands.pop();
+
+            int opVal = operation(v1, v2, operator); // operation value
+            operands.push(opVal);
+        }
+
+        System.out.println("answer = " + operands.peek());
+
     }
 
     public static int precedence(char operator) {
