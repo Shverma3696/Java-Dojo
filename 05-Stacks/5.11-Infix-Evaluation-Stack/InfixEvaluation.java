@@ -50,7 +50,7 @@ public class InfixEvaluation {
             } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
 
                 // ch is wanting higher priority operators to solve first
-                while (operators.size() >= 0 && operators.peek() != '('
+                while (operators.size() > 0 && operators.peek() != '('
                         && precedence(ch) <= precedence(operators.peek())) {
                     char operator = operators.pop();
                     int v2 = operands.pop();
