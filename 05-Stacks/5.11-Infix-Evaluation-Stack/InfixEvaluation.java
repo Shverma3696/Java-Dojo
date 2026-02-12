@@ -39,6 +39,8 @@ public class InfixEvaluation {
             } else if (ch == ')') {
                 while (operators.peek() != '(') {
                     char operator = operators.pop();
+
+                    // v2 comes out first because a-b != b-a, point to be extra careful
                     int v2 = operands.pop();
                     int v1 = operands.pop();
 
